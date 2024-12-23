@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AliExpress Стиль с Реферальной Ссылкой</title>
+    <title>Поиск на AliExpress</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -60,8 +60,8 @@
             const referralLink = 'https://rzekl.com/g/1e8d114494bbfea7326716525dc3e8/';
             const url = `https://aliexpress.com/wholesale?SearchText=${encodeURIComponent(query)}&ref=${referralLink}`;
             
-            // Открытие ссылки внутри мини-приложения
-            Telegram.WebApp.openLink(url);
+            // Отображение результатов внутри мини-приложения
+            window.open(url, '_self'); // открытие ссылки в том же окне
         }
     </script>
 </body>
