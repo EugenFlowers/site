@@ -73,7 +73,7 @@
                     const url = `https://aliexpress.ru/wholesale?SearchText=${encodeURIComponent(query)}&ref=${referralLink}`;
                     
                     // Открытие ссылки внутри мини-приложения
-                    Telegram.WebApp.openLink(url, { try_instant_view: true });
+                    window.location.href = url;
                 } else {
                     alert('Пожалуйста, введите запрос для поиска.');
                 }
