@@ -58,10 +58,15 @@
         function searchAliExpress() {
             const query = document.getElementById('search').value.trim();
             const referralLink = 'https://rzekl.com/g/1e8d114494bbfea7326716525dc3e8/';
-            const url = `https://aliexpress.com/wholesale?SearchText=${encodeURIComponent(query)}&ref=${referralLink}`;
             
-            // Открытие ссылки внутри мини-приложения
-            Telegram.WebApp.openTelegramLink(url);
+            if (query) { // Проверка на пустой запрос
+                const url = `https://aliexpress.com/wholesale?SearchText=${encodeURIComponent(query)}&ref=${referralLink}`;
+                
+                // Открытие ссылки внутри мини-приложения
+                Telegram.WebApp.openTelegramLink(url);
+            } else {
+                alert('Пожалуйста, введите запрос для поиска.'); // Уведомление о пустом запросе
+            }
         }
     </script>
 </body>
