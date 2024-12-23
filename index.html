@@ -6,62 +6,65 @@
     <title>Пользовательское соглашение</title>
     <style>
         body {
-            background-color: #ffffff;
-            color: #000000;
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             height: 100vh;
-            margin: 0;
-            padding: 20px;
             text-align: center;
         }
 
         h1 {
             margin-bottom: 20px;
+            font-size: 24px;
         }
 
         p {
-            max-width: 600px;
-            line-height: 1.5;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
         .button {
-            margin-top: 20px;
+            display: inline-block;
             padding: 10px 20px;
-            border: 2px solid #000000;
+            border: 2px solid #007bff;
+            border-radius: 5px;
             background-color: transparent;
-            color: #000000;
-            cursor: pointer;
-            font-size: 16px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
             transition: background-color 0.3s, color 0.3s;
         }
 
         .button:hover {
-            background-color: #f0f0f0;
+            background-color: #007bff;
+            color: white;
         }
     </style>
 </head>
 <body>
 
-    <h1>О пользовательском соглашении</h1>
+    <div>
+        <h1>О пользовательском соглашении</h1>
 
-    <p>
-        Пользователь, переходя по официальной реферальной ссылке рекламодателя партнёрской программы площадки Admitad, 
-        подтверждает, что понимает и принимает условия использования. Пользователь осознает, что он переходит на 
-        официальный ресурс рекламодателя и дает согласие на обработку своих данных в соответствии с политикой конфиденциальности.
-    </p>
+        <p>
+            Пользователь, переходя по официальной реферальной ссылке рекламодателя партнёрской программы площадки Admitad, 
+            подтверждает, что он переходит на официальный ресурс рекламодателя. 
+            Пользователь даёт согласие на обработку своих данных в соответствии с политикой конфиденциальности рекламодателя.
+        </p>
 
-    <p>
-        The user, by following the official referral link of the advertiser of the Admitad affiliate program, 
-        confirms that they understand and accept the terms of use. The user acknowledges that they are transitioning 
-        to the official resource of the advertiser and consents to the processing of their data in accordance with 
-        the privacy policy.
-    </p>
+        <p>
+            By clicking on the official referral link of the advertiser from the Admitad affiliate program, 
+            the user confirms that they are being redirected to the official resource of the advertiser. 
+            The user consents to the processing of their data in accordance with the advertiser's privacy policy.
+        </p>
 
-    <button class="button" onclick="window.location.href='https://market.yandex.ru/'">Ок</button>
+        <a href="https://market.yandex.ru/" class="button">Ок</a>
+    </div>
 
 </body>
 </html>
