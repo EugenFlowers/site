@@ -38,7 +38,7 @@
             cursor: pointer;
         }
         button:hover {
-            background-color: #e63939; /* Можно заменить на переменную */
+            background-color: #e63939; 
         }
     </style>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -59,7 +59,9 @@
             const query = document.getElementById('search').value.trim();
             const referralLink = 'https://rzekl.com/g/1e8d114494bbfea7326716525dc3e8/';
             const url = `https://aliexpress.ru/wholesale?SearchText=${encodeURIComponent(query)}&ref=${referralLink}`;
-            window.Telegram.WebApp.openUrl(url);
+            
+            // Используйте openUrl для открытия ссылки
+            Telegram.WebApp.openUrl(url);
         }
     </script>
 </body>
