@@ -46,27 +46,16 @@
         <h1>Поиск на AliExpress</h1>
     </header>
     <div class="search-container">
-        <input type="text" id="search" placeholder="Что вы ищете?" aria-label="Поиск на AliExpress">
+        <input type="text" id="search" placeholder="Что вы ищете?">
         <button onclick="searchAliExpress()">Поиск</button>
     </div>
 
     <script>
         function searchAliExpress() {
             const query = document.getElementById('search').value.trim();
-            
-            // Проверяем, что пользователь ввел запрос
-            if (query === '') {
-                alert('Пожалуйста, введите запрос для поиска.');
-                return; // Прерываем выполнение функции, если запрос пустой
-            }
-
             const referralLink = 'https://rzekl.com/g/1e8d114494bbfea7326716525dc3e8/';
-            
-            // Формируем URL для поиска на AliExpress
-            const url = `https://www.aliexpress.com/wholesale?SearchText=${encodeURIComponent(query)}`;
-            
-            // Открываем реферальную ссылку с добавленным URL поиска
-            window.open(referralLink + '?url=' + encodeURIComponent(url), '_blank');
+            const url = `https://www.aliexpress.com/wholesale?SearchText=${encodeURIComponent(query)}&ref=${referralLink}`;
+            window.open(url, '_blank');
         }
     </script>
 </body>
