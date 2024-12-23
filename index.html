@@ -3,24 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Поиск на Алиэкспресс</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        input[type="text"] { width: 80%; padding: 10px; }
-        button { padding: 10px; }
-    </style>
-</head>
-<body>
-    <h1>Поиск товаров на Алиэкспресс</h1>
-    <input type="text" id="search" placeholder="Введите название товара...">
-    <button onclick="searchAliExpress()">Поиск</button>
-
+    <title>Перенаправление на AliExpress</title>
     <script>
-        function searchAliExpress() {
-            const query = document.getElementById('search').value;
-            const url = `https://www.aliexpress.com/wholesale?SearchText=${encodeURIComponent(query)}`;
-            window.open(url, '_blank');
+        function redirectToProduct() {
+            var productId = '32849697882'; // Замените на ID товара
+            var referralCode = 'myname'; // Замените на ваш реферальный код
+            var url = 'https://ru.aliexpress.com/item/' + productId + '.html?partner=' + referralCode;
+            window.location.href = url;
         }
     </script>
+</head>
+<body onload="redirectToProduct()">
+    <p>Перенаправление на товар...</p>
 </body>
 </html>
