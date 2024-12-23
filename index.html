@@ -57,6 +57,7 @@
         if (Telegram.WebApp) {
             Telegram.WebApp.ready();
             Telegram.WebApp.expand();
+            Telegram.WebApp.enableVerticalSwipes(); // Включение вертикальных свайпов
         } else {
             alert('Telegram Mini Apps не поддерживаются в этом окружении.');
         }
