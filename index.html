@@ -72,12 +72,8 @@
                 if (query) {
                     const url = `https://aliexpress.ru/wholesale?SearchText=${encodeURIComponent(query)}&ref=${referralLink}`;
                     
-                    try {
-                        // Открытие ссылки внутри мини-приложения
-                        Telegram.WebApp.openLink(url);
-                    } catch (error) {
-                        alert('Ошибка при открытии ссылки: ' + error.message);
-                    }
+                    // Открытие ссылки внутри мини-приложения
+                    Telegram.WebApp.openLink(url, { try_instant_view: true });
                 } else {
                     alert('Пожалуйста, введите запрос для поиска.');
                 }
