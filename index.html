@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Предзагрузка</title>
+    <title>Пользовательское соглашение</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
+            background-color: white;
+            color: black;
+            text-align: center;
+            font-family: Arial, sans-serif;
         }
-        #loader {
-            font-size: 24px;
+        button {
+            border: 1px solid black;
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div id="loader">Loading...</div>
-    <script>
-        window.onload = function() {
-            // Задержка для имитации загрузки
-            setTimeout(function() {
-                window.location.href = "https://yandex.market.ru/"; // Перенаправление
-            }, 3000); // 3 секунды
-        };
-    </script>
+    <h1>О пользовательском соглашении</h1>
+    <p>Пользователь подтверждает, что переходит по официальной реферальной ссылке рекламодателя партнёрской программы Admitad, и осознает, что он будет перенаправлен на официальный ресурс рекламодателя. Пользователь дает свое согласие на обработку данных в соответствии с условиями данной программы.</p>
+    
+    <p>User confirms that he is following the official referral link of the advertiser of the Admitad affiliate program and understands that he will be redirected to the advertiser's official resource. The user consents to the processing of data in accordance with the terms of this program.</p>
+
+    <button>Ок</button>
 </body>
 </html>
