@@ -3,50 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пользовательское соглашение</title>
+    <title>Поиск на Алиэкспресс</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-            margin: 0;
-            padding: 50px;
-        }
-        h1 {
-            color: #0078D7;
-        }
-        p {
-            max-width: 600px;
-            margin: auto;
-            line-height: 1.6;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            border: 2px solid #0078D7;
-            background-color: transparent;
-            color: #0078D7;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-        .button:hover {
-            background-color: #0078D7;
-            color: white;
-        }
+        body { font-family: Arial, sans-serif; }
+        input[type="text"] { width: 80%; padding: 10px; }
+        button { padding: 10px; }
     </style>
 </head>
 <body>
-    <h1>О пользовательском соглашении</h1>
-    <p>Пользователь, переходя по официальной реферальной ссылке рекламодателя партнёрской программы площадки Admitad, подтверждает, что он переходит на официальный ресурс рекламодателя и даёт своё согласие на обработку данных.</p>
-    <p>User, by following the official referral link of the advertiser of the Admitad partner program, confirms that he is going to the official resource of the advertiser and gives his consent for data processing.</p>
-    <a href="https://market.yandex.ru/" class="button" onclick="this.classList.add('blink'); setTimeout(() => this.classList.remove('blink'), 600);">Ок</a>
-    
+    <h1>Поиск товаров на Алиэкспресс</h1>
+    <input type="text" id="search" placeholder="Введите название товара...">
+    <button onclick="searchAliExpress()">Поиск</button>
+
     <script>
-        document.querySelector('.button').addEventListener('click', function() {
-            this.classList.add('blink');
-        });
+        function searchAliExpress() {
+            const query = document.getElementById('search').value;
+            const url = `https://www.aliexpress.com/wholesale?SearchText=${encodeURIComponent(query)}`;
+            window.open(url, '_blank');
+        }
     </script>
 </body>
 </html>
