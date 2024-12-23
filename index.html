@@ -53,8 +53,13 @@
     </div>
 
     <script>
-        Telegram.WebApp.ready();
-        Telegram.WebApp.expand();
+        // Проверка поддержки Telegram Mini Apps
+        if (Telegram.WebApp) {
+            Telegram.WebApp.ready();
+            Telegram.WebApp.expand();
+        } else {
+            alert('Telegram Mini Apps не поддерживаются в этом окружении.');
+        }
 
         document.addEventListener('DOMContentLoaded', function() {
             const searchButton = document.getElementById('searchButton');
@@ -66,8 +71,12 @@
                 if (query) {
                     const url = `https://aliexpress.ru/wholesale?SearchText=${encodeURIComponent(query)}&ref=${referralLink}`;
                     
-                    // Открытие ссылки внутри мини-приложения
-                    Telegram.WebApp.openTelegramLink(url);
+                    try {
+                        // Открытие ссылки внутри мини-приложения
+                        Telegram.WebApp.openTelegramLink(url);
+                    } catch (error) {
+                        alert('Ошибка при открытии ссылки: ' + error.message);
+                    }
                 } else {
                     alert('Пожалуйста, введите запрос для поиска.');
                 }
