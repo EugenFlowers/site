@@ -3,17 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Перенаправление на AliExpress</title>
+    <title>AliExpress Стиль с Реферальной Ссылкой</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #ff4747;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #ff4747;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e63939;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Поиск на AliExpress</h1>
+    </header>
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Что вы ищете?">
+        <button onclick="searchAliExpress()">Поиск</button>
+    </div>
+
     <script>
-        function redirectToProduct() {
-            var productId = '32849697882'; // Замените на ID товара
-            var referralCode = 'myname'; // Замените на ваш реферальный код
-            var url = 'https://ru.aliexpress.com/item/' + productId + '.html?partner=' + referralCode;
-            window.location.href = url;
+        function searchAliExpress() {
+            const query = document.getElementById('search').value;
+            const referralLink = 'https://rzekl.com/g/1e8d114494bbfea7326716525dc3e8/';
+            const url = `${referralLink}?SearchText=${encodeURIComponent(query)}`;
+            window.open(url, '_blank');
         }
     </script>
-</head>
-<body onload="redirectToProduct()">
-    <p>Перенаправление на товар...</p>
 </body>
 </html>
