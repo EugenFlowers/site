@@ -49,26 +49,30 @@
     </header>
     <div class="search-container">
         <input type="text" id="search" placeholder="Что вы ищете?">
-        <button onclick="searchAliExpress()">Поиск</button>
+        <button id="searchButton">Поиск</button>
     </div>
 
     <script>
         Telegram.WebApp.ready();
         Telegram.WebApp.expand();
 
-        function searchAliExpress() {
-            const query = document.getElementById('search').value.trim();
-            const referralLink = 'https://rzekl.com/g/1e8d114494bbfea7326716525dc3e8/';
-            
-            if (query) {
-                const url = `https://aliexpress.ru/wholesale?SearchText=${encodeURIComponent(query)}&ref=${referralLink}`;
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchButton = document.getElementById('searchButton');
+
+            searchButton.addEventListener('click', function() {
+                const query = document.getElementById('search').value.trim();
+                const referralLink = 'https://rzekl.com/g/1e8d114494bbfea7326716525dc3e8/';
                 
-                // Открытие ссылки внутри мини-приложения
-                Telegram.WebApp.openTelegramLink(url);
-            } else {
-                alert('Пожалуйста, введите запрос для поиска.');
-            }
-        }
+                if (query) {
+                    const url = `https://aliexpress.ru/wholesale?SearchText=${encodeURIComponent(query)}&ref=${referralLink}`;
+                    
+                    // Открытие ссылки внутри мини-приложения
+                    Telegram.WebApp.openTelegramLink(url);
+                } else {
+                    alert('Пожалуйста, введите запрос для поиска.');
+                }
+            });
+        });
     </script>
 </body>
 </html>
