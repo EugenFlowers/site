@@ -52,9 +52,9 @@
 
     <script>
         function searchAliExpress() {
-            const query = document.getElementById('search').value;
+            const query = document.getElementById('search').value.trim();
             const referralLink = 'https://rzekl.com/g/1e8d114494bbfea7326716525dc3e8/';
-            const url = `${referralLink}?SearchText=${encodeURIComponent(query)}`;
+            const url = `https://www.aliexpress.com/wholesale?SearchText=${encodeURIComponent(query)}&ref=${referralLink}`;
             window.open(url, '_blank');
         }
     </script>
