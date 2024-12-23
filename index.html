@@ -59,13 +59,13 @@
             const query = document.getElementById('search').value.trim();
             const referralLink = 'https://rzekl.com/g/1e8d114494bbfea7326716525dc3e8/';
             
-            if (query) { // Проверка на пустой запрос
+            if (query) {
                 const url = `https://aliexpress.com/wholesale?SearchText=${encodeURIComponent(query)}&ref=${referralLink}`;
                 
                 // Открытие ссылки внутри мини-приложения
                 Telegram.WebApp.openTelegramLink(url);
             } else {
-                alert('Пожалуйста, введите запрос для поиска.'); // Уведомление о пустом запросе
+                alert('Пожалуйста, введите запрос для поиска.');
             }
         }
     </script>
