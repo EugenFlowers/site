@@ -11,57 +11,42 @@
             color: #333;
             text-align: center;
             margin: 0;
-            padding: 20px;
+            padding: 50px;
         }
         h1 {
-            color: #2c3e50;
+            color: #0078D7;
         }
         p {
             max-width: 600px;
-            margin: 0 auto 20px;
+            margin: auto;
             line-height: 1.6;
         }
         .button {
             display: inline-block;
             padding: 10px 20px;
-            border: 2px solid #2980b9;
-            color: #2980b9;
+            border: 2px solid #0078D7;
+            background-color: transparent;
+            color: #0078D7;
             text-decoration: none;
-            transition: background-color 0.3s, color 0.3s;
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
         .button:hover {
-            background-color: #2980b9;
+            background-color: #0078D7;
             color: white;
         }
     </style>
 </head>
 <body>
-
-<h1>О пользовательском соглашении</h1>
-<p>Настоящее пользовательское соглашение подтверждает, что вы переходите по официальной реферальной ссылке рекламодателя партнёрской программы площадки Admitad. Вы также подтверждаете, что переходите на официальный ресурс рекламодателя и даёте согласие на обработку ваших данных.</p>
-
-<p>This user agreement confirms that you are following the official referral link of the advertiser of the Admitad affiliate program. You also confirm that you are transitioning to the official resource of the advertiser and consent to the processing of your data.</p>
-
-<a href="https://market.yandex.ru/" class="button" onclick="this.classList.add('blink'); setTimeout(() => this.classList.remove('blink'), 600);">Ок</a>
-
-<script>
-    document.querySelector('.button').addEventListener('click', function() {
-        this.classList.add('blink');
-        setTimeout(() => this.classList.remove('blink'), 600);
-    });
-</script>
-
-<style>
-    .blink {
-        animation: blink-animation 1s steps(5, start) infinite;
-    }
-
-    @keyframes blink-animation {
-        to {
-            visibility: hidden;
-        }
-    }
-</style>
-
+    <h1>О пользовательском соглашении</h1>
+    <p>Пользователь, переходя по официальной реферальной ссылке рекламодателя партнёрской программы площадки Admitad, подтверждает, что он переходит на официальный ресурс рекламодателя и даёт своё согласие на обработку данных.</p>
+    <p>User, by following the official referral link of the advertiser of the Admitad partner program, confirms that he is going to the official resource of the advertiser and gives his consent for data processing.</p>
+    <a href="https://market.yandex.ru/" class="button" onclick="this.classList.add('blink'); setTimeout(() => this.classList.remove('blink'), 600);">Ок</a>
+    
+    <script>
+        document.querySelector('.button').addEventListener('click', function() {
+            this.classList.add('blink');
+        });
+    </script>
 </body>
 </html>
