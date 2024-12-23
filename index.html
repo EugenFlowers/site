@@ -9,62 +9,59 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             color: #333;
+            text-align: center;
             margin: 0;
             padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
         }
-
         h1 {
-            margin-bottom: 20px;
-            font-size: 24px;
+            color: #2c3e50;
         }
-
         p {
+            max-width: 600px;
+            margin: 0 auto 20px;
             line-height: 1.6;
-            margin-bottom: 20px;
         }
-
         .button {
             display: inline-block;
             padding: 10px 20px;
-            border: 2px solid #007bff;
-            border-radius: 5px;
-            background-color: transparent;
-            color: #007bff;
+            border: 2px solid #2980b9;
+            color: #2980b9;
             text-decoration: none;
-            font-weight: bold;
             transition: background-color 0.3s, color 0.3s;
         }
-
         .button:hover {
-            background-color: #007bff;
+            background-color: #2980b9;
             color: white;
         }
     </style>
 </head>
 <body>
 
-    <div>
-        <h1>О пользовательском соглашении</h1>
+<h1>О пользовательском соглашении</h1>
+<p>Настоящее пользовательское соглашение подтверждает, что вы переходите по официальной реферальной ссылке рекламодателя партнёрской программы площадки Admitad. Вы также подтверждаете, что переходите на официальный ресурс рекламодателя и даёте согласие на обработку ваших данных.</p>
 
-        <p>
-            Пользователь, переходя по официальной реферальной ссылке рекламодателя партнёрской программы площадки Admitad, 
-            подтверждает, что он переходит на официальный ресурс рекламодателя. 
-            Пользователь даёт согласие на обработку своих данных в соответствии с политикой конфиденциальности рекламодателя.
-        </p>
+<p>This user agreement confirms that you are following the official referral link of the advertiser of the Admitad affiliate program. You also confirm that you are transitioning to the official resource of the advertiser and consent to the processing of your data.</p>
 
-        <p>
-            By clicking on the official referral link of the advertiser from the Admitad affiliate program, 
-            the user confirms that they are being redirected to the official resource of the advertiser. 
-            The user consents to the processing of their data in accordance with the advertiser's privacy policy.
-        </p>
+<a href="https://market.yandex.ru/" class="button" onclick="this.classList.add('blink'); setTimeout(() => this.classList.remove('blink'), 600);">Ок</a>
 
-        <a href="https://market.yandex.ru/" class="button">Ок</a>
-    </div>
+<script>
+    document.querySelector('.button').addEventListener('click', function() {
+        this.classList.add('blink');
+        setTimeout(() => this.classList.remove('blink'), 600);
+    });
+</script>
+
+<style>
+    .blink {
+        animation: blink-animation 1s steps(5, start) infinite;
+    }
+
+    @keyframes blink-animation {
+        to {
+            visibility: hidden;
+        }
+    }
+</style>
 
 </body>
 </html>
