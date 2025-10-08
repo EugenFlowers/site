@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Список банков</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+      background-color: #ffffff; /* белый фон */
+      color: #000000; /* чёрный текст */
+    }
+    .bank-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .bank-item {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0, 128, 0, 0.15); /* лёгкая зелёная тень */
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      overflow: visible;
+      padding: 15px;
+      border: 2px solid #4caf50; /* зелёная рамка */
+      transition: box-shadow 0.3s ease;
+    }
+    .bank-item:hover {
+      box-shadow: 0 0 20px rgba(76, 175, 80, 0.4);
+    }
+    .bank-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .bank-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .bank-name {
+      font-weight: 700;
+      font-size: 1.3em;
+      line-height: 1.2;
+      flex-grow: 1;
+      color: #000000; /* чёрный */
+    }
+    .bank-description {
+      font-size: 1em;
+      line-height: 1.4;
+      margin-bottom: 20px;
+      white-space: normal;
+      color: #000000; /* чёрный текст */
+    }
+    .bank-footer {
+      text-align: center;
+    }
+    .btn-apply {
+      background-color: #4caf50; /* зелёный фон */
+      border: none;
+      color: white; /* белый текст */
+      padding: 15px 30px; /* увеличено */
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.2em; /* увеличен */
+      font-weight: 700; /* жирнее */
+      transition: background-color 0.3s ease;
+      width: 100%;
+      letter-spacing: 0.05em; /* увеличен интервал между буквами */
+    }
+    .btn-apply:hover {
+      background-color: #388e3c; /* тёмно-зелёный */
+    }
+    @media (max-width: 360px) {
+      .bank-item {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Список предложений банков</h1>
+  <div class="bank-list">
+    <div class="bank-item">
+      <div class="bank-header">
+        <img src="logos/bank1.png" alt="Логотип банка 1" class="bank-logo" />
+        <div class="bank-name">Банк 1</div>
+      </div>
+      <div class="bank-description">
+        Выгодные процентные ставки. Быстрое одобрение заявки. Кредит до 1 000 000 рублей. Онлайн заявление без посещения офиса.
+      </div>
+      <div class="bank-footer">
+        <button class="btn-apply">Оформить заявку</button>
+      </div>
+    </div>
+
+    <div class="bank-item">
+      <div class="bank-header">
+        <img src="logos/bank2.png" alt="Логотип банка 2" class="bank-logo" />
+        <div class="bank-name">Банк 2</div>
+      </div>
+      <div class="bank-description">
+        Низкий первоначальный взнос, сроки кредитования до 5 лет, возможность досрочного погашения, специальные условия для пенсионеров.
+      </div>
+      <div class="bank-footer">
+        <button class="btn-apply">Оформить заявку</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
