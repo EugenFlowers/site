@@ -9,8 +9,8 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 10px;
-      background-color: #ffffff; /* белый фон */
-      color: #000000; /* чёрный текст */
+      background-color: #ffffff;
+      color: #000000;
     }
     .bank-list {
       display: flex;
@@ -21,13 +21,13 @@
     .bank-item {
       background: white;
       border-radius: 8px;
-      box-shadow: 0 0 12px rgba(0, 128, 0, 0.15); /* лёгкая зелёная тень */
+      box-shadow: 0 0 12px rgba(0, 128, 0, 0.15);
       width: 320px;
       display: flex;
       flex-direction: column;
       overflow: visible;
       padding: 15px;
-      border: 2px solid #4caf50; /* зелёная рамка */
+      border: 2px solid #4caf50;
       transition: box-shadow 0.3s ease;
     }
     .bank-item:hover {
@@ -50,33 +50,36 @@
       font-size: 1.3em;
       line-height: 1.2;
       flex-grow: 1;
-      color: #000000; /* чёрный */
+      color: #000000;
     }
     .bank-description {
       font-size: 1em;
       line-height: 1.4;
       margin-bottom: 20px;
       white-space: normal;
-      color: #000000; /* чёрный текст */
+      color: #000000;
     }
     .bank-footer {
       text-align: center;
     }
     .btn-apply {
-      background-color: #4caf50; /* зелёный фон */
+      background-color: #4caf50;
       border: none;
-      color: white; /* белый текст */
-      padding: 15px 30px; /* увеличено */
+      color: white;
+      padding: 15px 30px;
       border-radius: 6px;
       cursor: pointer;
-      font-size: 1.2em; /* увеличен */
-      font-weight: 700; /* жирнее */
+      font-size: 1.2em;
+      font-weight: 700;
       transition: background-color 0.3s ease;
       width: 100%;
-      letter-spacing: 0.05em; /* увеличен интервал между буквами */
+      letter-spacing: 0.05em;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
     }
     .btn-apply:hover {
-      background-color: #388e3c; /* тёмно-зелёный */
+      background-color: #388e3c;
     }
     @media (max-width: 360px) {
       .bank-item {
@@ -98,7 +101,7 @@
         Выгодные процентные ставки. Быстрое одобрение заявки. Кредит до 1 000 000 рублей. Онлайн заявление без посещения офиса.
       </div>
       <div class="bank-footer">
-        <button class="btn-apply">ОФОРМИТЬ</button>
+        <a href="https://example.com/bank1" class="btn-apply" target="_blank">ОФОРМИТЬ</a>
       </div>
     </div>
 
@@ -111,37 +114,36 @@
         Низкий первоначальный взнос, сроки кредитования до 5 лет, возможность досрочного погашения, специальные условия для пенсионеров.
       </div>
       <div class="bank-footer">
-        <button class="btn-apply">ОФОРМИТЬ</button>
+        <a href="https://example.com/bank2" class="btn-apply" target="_blank">ОФОРМИТЬ</a>
       </div>
     </div>
-     <div class="bank-item">
+
+    <div class="bank-item">
       <div class="bank-header">
-        <img src="logos/bank2.png" alt="Логотип банка 2" class="bank-logo" />
-        <div class="bank-name">Банк 2</div>
+        <img src="logos/bank3.png" alt="Логотип банка 3" class="bank-logo" />
+        <div class="bank-name">Банк 3</div>
       </div>
       <div class="bank-description">
-        Низкий первоначальный взнос, сроки кредитования до 5 лет, возможность досрочного погашения, специальные условия для пенсионеров.
+        Без скрытых комиссий, моментальное зачисление на карту, оформление полностью онлайн, лояльные требования к заёмщику.
       </div>
       <div class="bank-footer">
-        <button class="btn-apply">ОФОРМИТЬ</button>
+        <a href="https://example.com/bank3" class="btn-apply" target="_blank">ОФОРМИТЬ</a>
       </div>
     </div>
-     <div class="bank-item">
+
+    <div class="bank-item">
       <div class="bank-header">
-        <img src="logos/bank2.png" alt="Логотип банка 2" class="bank-logo" />
-        <div class="bank-name">Банк 2</div>
+        <img src="logos/bank4.png" alt="Логотип банка 4" class="bank-logo" />
+        <div class="bank-name">Банк 4</div>
       </div>
       <div class="bank-description">
-        Низкий первоначальный взнос, сроки кредитования до 5 лет, возможность досрочного погашения, специальные условия для пенсионеров.
+        Оформление за 5 минут, минимальный пакет документов, специальные предложения для новых клиентов.
       </div>
       <div class="bank-footer">
-        <button class="btn-apply">ОФОРМИТЬ</button>
+        <a href="https://example.com/bank4" class="btn-apply" target="_blank">ОФОРМИТЬ</a>
       </div>
     </div>
   </div>
 
 </body>
 </html>
-
-
-
