@@ -58,6 +58,12 @@
       margin-bottom: 20px;
       white-space: normal;
       color: #000000;
+      text-align: left; /* выравнивание по левому краю */
+    }
+    .bank-description ul {
+      list-style-type: none; /* убираем точки */
+      padding-left: 0; /* убираем отступ слева */
+      margin: 0;
     }
     .bank-footer {
       text-align: center;
@@ -95,7 +101,12 @@
         <div class="bank-name">Банк 1</div>
       </div>
       <div class="bank-description">
-        ✅ Выгодные процентные ставки ✅ Быстрое одобрение заявки. Кредит до 1 000 000 рублей ✅ Онлайн заявление без посещения офиса.
+        <ul>
+          <li>✅ Выгодные процентные ставки</li>
+          <li>✅ Быстрое одобрение заявки</li>
+          <li>Кредит до 1 000 000 рублей</li>
+          <li>✅ Онлайн заявление без посещения офиса</li>
+        </ul>
       </div>
       <div class="bank-footer">
         <button class="btn-apply" onclick="window.open('https://links.inssmart.ru/offers?subId=2a940lq4x6&offerId=1276', '_blank')">ОФОРМИТЬ</button>
@@ -108,7 +119,12 @@
         <div class="bank-name">Банк 2</div>
       </div>
       <div class="bank-description">
-        Низкий первоначальный взнос, сроки кредитования до 5 лет, возможность досрочного погашения, специальные условия для пенсионеров.
+        <ul>
+          <li>Низкий первоначальный взнос</li>
+          <li>Сроки кредитования до 5 лет</li>
+          <li>Возможность досрочного погашения</li>
+          <li>Специальные условия для пенсионеров</li>
+        </ul>
       </div>
       <div class="bank-footer">
         <button class="btn-apply" onclick="window.open('https://example.com/bank2', '_blank')">ОФОРМИТЬ</button>
@@ -117,11 +133,15 @@
 
     <div class="bank-item">
       <div class="bank-header">
-        <img src="logos/bank2.png" alt="Логотип банка 3" class="bank-logo" />
+        <img src="logos/bank3.png" alt="Логотип банка 3" class="bank-logo" />
         <div class="bank-name">Банк 3</div>
       </div>
       <div class="bank-description">
-        Быстрое оформление кредита и удобный личный кабинет. Решение за 2 минуты.
+        <ul>
+          <li>Быстрое оформление кредита</li>
+          <li>Удобный личный кабинет</li>
+          <li>Решение за 2 минуты</li>
+        </ul>
       </div>
       <div class="bank-footer">
         <button class="btn-apply" onclick="window.open('https://example.com/bank3', '_blank')">ОФОРМИТЬ</button>
@@ -130,11 +150,15 @@
 
     <div class="bank-item">
       <div class="bank-header">
-        <img src="logos/bank2.png" alt="Логотип банка 4" class="bank-logo" />
+        <img src="logos/bank4.png" alt="Логотип банка 4" class="bank-logo" />
         <div class="bank-name">Банк 4</div>
       </div>
       <div class="bank-description">
-        Онлайн-заявка без визита в офис. Минимум документов и мгновенное зачисление на карту.
+        <ul>
+          <li>Онлайн-заявка без визита в офис</li>
+          <li>Минимум документов</li>
+          <li>Мгновенное зачисление на карту</li>
+        </ul>
       </div>
       <div class="bank-footer">
         <button class="btn-apply" onclick="window.open('https://example.com/bank4', '_blank')">ОФОРМИТЬ</button>
