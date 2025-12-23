@@ -5,19 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кредитный калькулятор</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 20px; background: #f8f9fa; color: #333; line-height: 1.6; }
-        .container { max-width: 400px; margin: 0 auto; background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-        h1 { font-size: 24px; font-weight: 600; margin: 0 0 20px; color: #1a1a1a; text-align: center; }
-        .info { background: #e8f4fd; padding: 20px; border-radius: 10px; margin: 20px 0; font-size: 14px; }
-        .calculator { background: white; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; margin: 20px 0; }
-        input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; box-sizing: border-box; margin: 10px 0; }
-        button { width: 100%; padding: 15px; background: #007bff; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 500; cursor: pointer; margin: 10px 0; }
-        button:hover { background: #0056b3; }
-        .disclaimer { background: #fff3cd; padding: 15px; border-radius: 8px; font-size: 12px; border-left: 4px solid #ffc107; margin-top: 20px; }
-        .telegram-btn { background: #0088cc; margin-top: 20px; }
-        .telegram-btn:hover { background: #006ba1; }
-        .erid { font-size: 10px; color: #666; text-align: center; margin-top: 20px; }
-        label { font-size: 13px; color: #555; display: block; margin-top: 8px; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 20px;
+            color: #1a1a1a;
+            text-align: center;
+        }
+        .info {
+            background: #e8f4fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 14px;
+            text-align: center;
+        }
+        .calculator {
+            background: white;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            margin: 10px 0;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .disclaimer {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            border-left: 4px solid #ffc107;
+            margin-top: 20px;
+        }
+        .telegram-btn {
+            background: #0088cc;
+            margin-top: 20px;
+        }
+        .telegram-btn:hover {
+            background: #006ba1;
+        }
+        .erid {
+            font-size: 10px;
+            color: #666;
+            text-align: center;
+            margin-top: 20px;
+        }
+        label {
+            font-size: 13px;
+            color: #555;
+            display: block;
+            margin-top: 8px;
+        }
     </style>
 </head>
 <body>
@@ -25,7 +101,7 @@
         <h1>Кредитный калькулятор</h1>
         
         <div class="info">
-            <p>Сделайте расчёт и выберите подходящий вариант.</p>
+            <p>Сделайте расчёт и выберите подходящий для Вас вариант:</p>
         </div>
 
         <div class="calculator">
@@ -80,11 +156,12 @@
             document.getElementById('result').innerHTML = 
                 `Примерно: к возврату ${total.toLocaleString()} руб.<br>
                 Переплата ${overpay.toLocaleString()} руб.<br>
-                <small>Расчет приблизительный и не учитывает акции и индивидуальные условия. Точные условия в боте.</small>`;
+                <small>Расчет приблизительный и не учитывает акции и индивидуальные условия. Точные условия и расчёты в боте.</small>`;
         }
     </script>
 </body>
 </html>
+
 
 
 
